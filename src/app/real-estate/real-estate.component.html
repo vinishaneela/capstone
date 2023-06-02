@@ -1,0 +1,23 @@
+<table border="2px">
+    <tr>
+      <th>RealEstate Id</th>
+      <th>Property Type</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Current Price</th>
+      <th>Previous Price</th>    
+    </tr>
+    <tr *ngFor="let realestate of realEstate">
+      <td>{{realestate.realEstateId}}</td>
+      <td>{{realestate.propertyType}}</td>
+      <td>{{realestate.name}}</td>
+      <td>{{realestate.location}}</td>
+      <td>{{realestate.currentPrice}}</td>
+      <td>{{realestate.previousPrice}}</td>
+      <td>
+        <button mat-raised-button color="primary" (click)="inputDisplay()" [disabled]="isButtonDisabled"> Buy</button>
+        <!-- <button mat-raised-button color="primary" >Sell</button> -->
+    </td>
+    </tr>
+    
+</table>
