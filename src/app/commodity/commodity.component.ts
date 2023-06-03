@@ -31,7 +31,9 @@ export class CommodityComponent {
       }
     )
   }
- 
+  changeVolume(){
+    let volume=prompt("Enter the volume you want to buy")
+  }
   inputBuyDisplay(com:Commodity) {
     
     this.volumeStr= prompt("Enter the volume you want to Buy");

@@ -21,7 +21,7 @@ export class RealEstateComponent {
       }
     )
   }
-  inputDisplay(){
+  changeVolume(){
     let volume=prompt("Enter the volume you want to invest");
    
     this.isButtonDisabled=true
