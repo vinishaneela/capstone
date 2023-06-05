@@ -6,4 +6,5 @@ export class Bond{
     ytm:String='';//(Yield To Maturity)
     frequency:String='';
     taxable:String='';
+    volume:any;
 }

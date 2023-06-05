@@ -5,4 +5,5 @@ export class RealEstate{
 	location:String='';
 	currentPrice:number=0;
 	previousPrice:number=0;
+	volume:any;
 }

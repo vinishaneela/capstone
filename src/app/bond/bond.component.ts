@@ -9,6 +9,7 @@ import { BondService } from '../bond.service';
 })
 export class BondComponent {
   bondDetails:Bond[]=[];
+  bond=new Bond();
   constructor(private _bondSrv:BondService){}
   ngOnInit(){
     this._bondSrv.getBondDetails().subscribe(
@@ -20,8 +21,18 @@ export class BondComponent {
        }
     )
   }
-  changeVolume(){
-    let volume=prompt("Enter the volume of bonds you want to buy:")
+  changeVolume(item:Bond){
+    this.bond.volume=prompt("Enter the volume of bonds you want to buy:")
+    console.log(this.bond.volume)
+    this._bondSrv.postBond(this.bond).subscribe(
+      data=>{
+        console.log(data)
+      },
+      error=>{
+        console.log(error)
+      }
+    )
+
   }
   getVolume(bond:Bond){
     console.log(bond)
